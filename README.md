@@ -4,6 +4,7 @@ This is a tiny demo project to show how simple it is to:
 
 - upload an image to OpenAI using the Files API (`purpose="vision"`)
 - ask questions about that image with the Responses API
+- keep a multi-turn conversation so follow-up questions have context
 - clean up by deleting the uploaded file
 
 It is intentionally minimal and designed for learning/sharing, not production use.
@@ -43,3 +44,5 @@ uv run python main.py /path/to/your/image.jpg
 
 Then type questions in the prompt. Type `exit`, `quit`, `q`, or press Enter on an empty prompt to finish.
 
+The first question is sent with the image. After that, follow-up questions use the same
+conversation state, so you can ask iterative questions without re-sending the image each turn.
