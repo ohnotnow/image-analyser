@@ -21,7 +21,7 @@ def ask_question_about_image(file_id, question):
         input=[{
             "role": "user",
             "content": [
-                {"type": "input_text", "text": "what's in this image?"},
+                {"type": "input_text", "text": question},
                 {
                     "type": "input_image",
                     "file_id": file_id,
